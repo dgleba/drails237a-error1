@@ -1,0 +1,43 @@
+<div class="page-header">
+  <%= link_to new_vehicle_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Vehicle
+  <% end %>
+  <h1>Listing vehicles</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+       <!-- disable destroy.. 
+         <th></th>
+        -->
+            <th>Veh reg no</th>
+            <th>Category</th>
+            <th>Brand</th>
+            <th>Name</th>
+            <th>Photo</th>
+            <th>Daily rate</th>
+          </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @vehicles) do |vehicle| %>
+        <td><%= link_to 'Show', vehicle %></td>
+        <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+        <!-- disable destroy.. 
+        <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        -->
+            <td><%= vehicle.veh_reg_no %></td>
+            <td><%= vehicle.category %></td>
+            <td><%= vehicle.brand %></td>
+            <td><%= vehicle.name %></td>
+            <td><%= vehicle.photo %></td>
+            <td><%= vehicle.daily_rate %></td>
+          <% end %>
+    </tbody>
+  </table>
+</div>

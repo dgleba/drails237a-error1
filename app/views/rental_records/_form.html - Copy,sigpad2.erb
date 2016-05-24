@@ -1,0 +1,30 @@
+<%= simple_form_for(@rental_record) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :customer %>
+    <%= f.association :vehicle %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.input :lastUpdated %>
+  </div>
+
+    
+   <div class="sigPad">
+     <p class="drawItDesc">Draw your signature</p>
+       <ul class="sigNav">
+          <li class="clearButton"><a href="#clear">Clear</a></li>
+        </ul>
+    <div class="sig sigWrapper">
+      <div class="typed"></div>
+      <canvas class="pad" width="498" height="155"></canvas>
+      <%= f.input_field :output, as: :hidden %>
+    </div>
+    </div>
+
+
+ 
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

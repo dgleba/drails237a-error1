@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 
+  vehicle_id: 
+  start_date: 2016-05-05
+  end_date: 2016-05-05
+  lastUpdated: 2016-05-05 22:36:40
+  output: MyText
+
+two:
+  customer_id: 
+  vehicle_id: 
+  start_date: 2016-05-05
+  end_date: 2016-05-05
+  lastUpdated: 2016-05-05 22:36:40
+  output: MyText

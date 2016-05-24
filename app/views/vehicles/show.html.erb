@@ -1,0 +1,32 @@
+<div class="page-header">
+  <%= link_to vehicles_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_vehicle_path(@vehicle), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show vehicle</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Veh reg no:</dt>
+  <dd><%= @vehicle.veh_reg_no %></dd>
+
+  <dt>Category:</dt>
+  <dd><%= @vehicle.category %></dd>
+
+  <dt>Brand:</dt>
+  <dd><%= @vehicle.brand %></dd>
+
+  <dt>Name:</dt>
+  <dd><%= @vehicle.name %></dd>
+
+  <dt>Photo:</dt>
+  <dd><%= @vehicle.photo %></dd>
+
+  <dt>Daily rate:</dt>
+  <dd><%= @vehicle.daily_rate %></dd>
+
+</dl>
